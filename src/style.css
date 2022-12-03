@@ -1,0 +1,105 @@
+body {
+  font-family: sans-serif;
+  font-size: 1.25rem;
+  padding: 1rem;
+}
+
+h1 {
+  text-align: center;
+}
+
+input[type="text"] {
+  width: 100%;
+  max-width: 40ch;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1.25rem;
+}
+
+button {
+  width: 100%;
+  max-width: 40ch;
+  font-size: 1em;
+  background-color: #4caf50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+figure {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  max-width: 400px;
+  padding-top: 1rem;
+}
+
+p {
+  text-indent: 3rem;
+}
+
+figcaption {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  padding-top: 1rem;
+  max-width: 100%;
+}
+
+img {
+  max-width: 100%;
+  box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.5);
+  border-radius: 1rem;
+}
+
+.container {
+  display: grid;
+  width: 100%;
+  gap: 1.25rem;
+}
+
+.container div {
+  display: flex;
+  justify-content: center;
+  border: 1px solid #333;
+  border-radius: 1rem;
+}
+
+.spacer {
+  height: 5rem;
+}
+
+footer {
+  margin-top: 10rem;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #45a049;
+  color: white;
+  text-align: center;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+@media (min-width: 420px) {
+  .container {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    place-content: center;
+  }
+}

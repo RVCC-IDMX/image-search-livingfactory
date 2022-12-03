@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="./camera.svg">
+  <link rel="stylesheet" href="style.css">
+  <title>Unsplash Photo Search</title>
+</head>
+
+<body>
+  <h1>Unsplash Search</h1>
+
+  <!-- search form -->
+  <form class="search-form">
+    <label for="query">Search</label>
+    <br>
+    <input id="query" name="query" type="text" />
+    <br>
+    <button>Submit</button>
+  </form>
+
+  <!--
+    https://mzl.la/3rpwGqS
+   -->
+  <template id="template">
+    <div class="card">
+      <figure>
+        <img src="" alt="" class="post__img">
+        <figcaption class="post__user"></figcaption>
+        <p class="post__desc"></p>
+      </figure>
+    </div>
+  </template>
+
+  <!--
+    Append each template clone in the DOM in order to use it
+   -->
+  <div class="container"></div>
+
+  <div class="spacer"></div>
+  <footer>
+    <p>
+      <a href="https://unsplash.com/">All images, courtesy of Unsplash.com</a>
+    </p>
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+
+</html>
