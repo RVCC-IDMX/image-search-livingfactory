@@ -1,4 +1,5 @@
 const form = document.querySelector('.search-form');
+const container = document.querySelector('.container');
 
 form.addEventListener('submit', async (event) => {
   event.preventDefault();
@@ -16,6 +17,14 @@ form.addEventListener('submit', async (event) => {
 
   console.log(response);
 
+  response.results.forEach((dataObj) => {
+    const clone = document.querySelector('#template').content.cloneNode(true);
+    const postImg = clone.querySelector('.post__img');
+    postImg.src = dataObj.urls.small;
+    postImg.alt = dataObj.alt_description;
+
+    container.appendChild(clone);
+  });
   /*
   some sample code
     const dataObj = response.results[0];
